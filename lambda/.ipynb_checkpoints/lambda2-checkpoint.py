@@ -9,7 +9,7 @@ s3 = boto3.resource('s3')
 runtime= boto3.client('runtime.sagemaker')
 
 # Fill this in with the name of your deployed model
-ENDPOINT = "image-classification-2023-02-01-08-58-55-774" ## TODO: fill in
+ENDPOINT = "image-classification-2023-02-06-07-02-45-972" ## TODO: fill in
 
 def lambda_handler(event, context):
     
@@ -27,9 +27,9 @@ def lambda_handler(event, context):
     return {
         'statusCode': 200,
         'body': {
-            "image_data": event['image_data'],
-            "s3_bucket": event['s3_bucket'],
-            "s3_key": event['s3_key'],
+            "image_data": event['body']['image_data'],
+            "s3_bucket": event['body']['s3_bucket'],
+            "s3_key": event['body']['s3_key'],
             "inferences": event['inferences'],
         }
     }
