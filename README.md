@@ -15,7 +15,3 @@ In this project, we'll use AWS Sagemaker to build an image classification model 
 ## Dataset
 The dataset is  CIFAR-100. The CIFAR dataset is open source and generously hosted by the University of Toronto at: https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz.
 
-# Project Steps Overview
-
-## Data staging
-In AWS sagemeker studio the notebook we choose has been tested on the Python 3 (Data Science) kernel with the ml.t3.medium instance.
